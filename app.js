@@ -9,6 +9,24 @@ const savebtn = document.querySelectorAll('.formbtn');
 const taskNameInput = document.querySelectorAll('.form-in input[type="text"]');
 const listSection = document.querySelector('.listsection-task');
 
+
+for( let i = 0; i < taskli.length; i++){
+    
+    taskli[0].addEventListener('click', function(a){
+        
+    })
+
+
+    taskli[1].addEventListener('click', function(e){
+        let newh1 = e.target.textContent;
+        newsection.innerHTML = '<h1>' + newh1 + '</h1>';
+        listlinesec.style.display = 'flex'; 
+        localStorage.setItem('todayContent', newh1);
+    })
+
+}
+
+
 window.addEventListener('DOMContentLoaded', function() {
     const storedContent = localStorage.getItem('todayContent');
     if (storedContent) {
