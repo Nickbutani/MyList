@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LIST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/b15cd79f79.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="container">
+        <section id="nav-column">
+            <nav class="nav-bar">
+                <div class = "nav-menu">
+                    <h2 class="menu">Menu</h2>
+                    <button class="nav-btn"><i class="bi bi-three-dots"></i></button>
+                </div>
+                <div class="navigation">
+                    <div class="search">
+                        <div class="search-div">
+                                <i class="bi bi-search"></i>
+                                <input  class= "search-input" placeholder="Search" type="text" >
+                        
+                        </div>
+                    </div>
+                    <div class = "task">
+                        <p class="task-p">TASKS</p>
+                        <div class="task-list">
+                            <ul class="task-ul">
+                                <li class="task-li"><i class="fa-solid fa-angles-right"></i> Upcoming</li>
+                                <li class="task-li"><i class="fa-solid fa-list-check"></i> Today</li>
+                                <li class="task-li"><i class="bi bi-calendar3"></i> Calendar</li>
+                                <li class="task-li"><i class="bi bi-stickies-fill"></i> Sticky Notes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-li">
+                        <p class="list-p">LISTS</p>
+                        <ul class="list-ul">
+                            <li class="list-text"> Personal</li>
+                            <li class="list-text"> Work</li>
+                            <li class="list-text"> List 1</li>
+                            <button class = "list-btn"> <i class="fa-solid fa-plus"></i> Add New List</button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags">
+                    <p class="tag-p">TAGS</p>
+                    <div class="tags-div">
+                        <button class="tag-btn">Tag 1</button>
+                        <button class="tag-btn">Tag 1</button>
+                        <button class="tag-btn"> <i class="fa-solid fa-plus"></i> Add Tag</button>
+                    </div>
+                </div>
+
+                <div class="nav-footer">
+                    <ul class="nav-footer-ul">
+                        <li class="nav-footer-li"> <i class="fa-solid fa-sliders"></i> Settings</li>
+                        <li class="nav-footer-li"><i class="fa-solid fa-right-from-bracket"></i> Sign out</li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <section id="list-section">
+            <div class="list-div-today">
+                <div class="list-h1">
+                    <h1></h1>
+                </div>
+                <div class="list-line">
+                    <div class="list-input-btn">
+                        <button class="input-btn"><i class="fa-solid fa-plus"></i> Add New Task</button>
+                    </div>
+                    <div class="listsection-list">
+                        <ul class="listsection-task">
+       
+                        </ul>
+                    </div>
+                    <div class="list-removebtn">
+                        <button class="removebtn">Remove</button>
+                        <button class="removebtn">Completed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-div">
+
+            </div>
+        </section>
+        <section id="form-sec">
+            <div class="form-div" >
+                <div class="form-head">
+                    <h1>Task:</h1>
+                </div>
+                <div class="form-inputs">
+                    <div class="form-in">
+                        <input placeholder="Enter Task Name" type="text">
+                        <input placeholder="Description" type="text">
+                    </div>
+                    <div class="form-list">
+                        <div class="forms">
+                            <label for="lists">List</label>
+                            <select name = "lists" class="lists-drop">
+                                <option value="Personal"> Personal</option>
+                                <option value = "Work">Work</option>
+                                <option value="List 1">List 1</option>
+                            </select>
+                        </div>
+                        <div class="forms">
+                            <label for="date">Date</label>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="forms">
+                            <label for="tag-box">Tags</label>
+                            <select name = "tags-box" class="tag-box">
+                                <option value="Tag 1">Tag 1</option>
+                                <option value="Tag 2">Tag 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-removebtn">
+                        <button class="formbtn">Cancel</button>
+                        <button class="formbtn">Save</button>
+                    </div>
+                </div>
+              
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

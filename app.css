@@ -1,0 +1,416 @@
+body{
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    height: 90vh;
+    background-color: aliceblue;
+}
+
+#container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#container #nav-column{
+    border: 1px solid red;
+    width: 20%;
+    background-color: rgb(241, 241, 241);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+}
+
+.nav-bar {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navigation{
+    margin: 8px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: none;
+    flex: 1;
+    padding: 5px;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    color: #555;
+    margin-right: 5px;
+}
+
+.list-p,
+.task-p,
+.tag-p {
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.task-ul,
+.list-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-text,
+.task-li {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin:3px;
+    border: none;
+}
+
+.task-li:hover,
+.list-text:hover {
+    background-color: #ebebeb;
+}
+
+.list-text i,
+.task-li i {
+    margin-right: 0.8rem;
+    color: #575757;
+}
+
+.list-text {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 5px;
+}
+
+.list-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; 
+    height: 15px;
+    background-color: #ccc; 
+    border-radius: 20%; 
+}
+
+.list-btn{
+    border: none;
+    padding:0;
+    cursor: pointer;
+}
+
+.list-text:nth-child(1)::before {
+    background-color: #ffcc00; 
+}
+
+.list-text:nth-child(2)::before {
+    background-color: #0099ff; 
+}
+
+.list-text:nth-child(3)::before {
+    background-color: #ff6666; 
+}
+
+.tag-btn {
+    color: #575757;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.tag-btn:nth-child(1){
+    background-color: #ff666672 ;
+}
+
+.tag-btn:nth-child(1):hover{
+    background-color: #ff6666d1 ;
+}
+
+.tag-btn:nth-child(2){
+    background-color: #66e3ff72 ;
+}
+
+.tag-btn:nth-child(2):hover{
+    background-color: #66e3ffe2 ;
+}
+
+.tag-btn:nth-child(3):hover{
+    background-color: #b9b7b7;
+}
+
+.nav-footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+   
+}
+
+.nav-footer-li {
+    color: #575757;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    
+}
+
+.nav-footer-ul{
+    list-style: none;
+    padding:0;
+}
+
+#list-section{
+    margin: 0 2rem 0 2rem;
+    width: 60%;
+}
+
+.list-h1{
+    margin-top: 1rem;
+}
+
+.list-h1 h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.list-div-today{
+    /* display:none; */
+    height: 100%;
+    
+}
+.list-line{
+    padding:10px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.listsection-task {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.listsection-task li {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1.2rem;
+   
+}
+
+.listsection-task li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.listsection-task li input:checked{
+    opacity: 1;
+}
+
+.listsection-task li span {
+    margin-left: auto;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.input-btn{
+    border: none;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding:10px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #848181;
+}
+
+.input-btn i{
+    margin-right: 10px;
+}
+
+.removebtn{
+    padding: 10px;
+    width: 7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;  
+    
+}
+
+.list-removebtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    gap: 1rem;
+   
+}
+
+.removebtn:nth-child(1):hover{
+    background-color: #dad8d8;
+}
+
+.removebtn:nth-child(2){
+    background-color: rgb(141, 255, 141);
+}
+
+.removebtn:nth-child(2):hover{
+    background-color: rgb(65, 241, 65); 
+}
+
+
+#form-sec{
+    background-color: rgb(241, 241, 241);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 30%;
+    display: none;
+}
+.form-div{
+    padding: 1rem;
+    height: 95%;
+}
+
+.form-inputs{
+    
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+}
+
+.form-in{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top:1rem;
+}
+
+.form-in input{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color:rgb(241, 241, 241) ;
+    font-size: 1rem; 
+}
+
+.form-in input:nth-child(2){
+    border-top: 1px solid #ccc;
+}
+
+.form-in input:nth-child(2){
+    margin-bottom: 5rem;
+}
+
+.form-in input:nth-child(2)::placeholder{
+    justify-content: flex-start;
+}
+
+.form-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.form-list .forms {
+   
+    display: flex;
+    align-items: center;
+    margin-right: 25px; 
+}
+
+.form-list .forms label {
+    margin-right: 20px; 
+}
+
+.form-list .forms select,
+.form-list .forms input[type="date"] {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    border:none;
+}
+
+.form-list div{
+    margin-bottom: 1rem;
+}
+
+.formbtn{
+    padding: 10px;
+    width: 7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.form-removebtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    gap: 1rem;
+   
+}
+
+.formbtn:nth-child(1){
+    background-color:rgb(202, 201, 201);
+}
+.formbtn:hover:nth-child(1){
+    background-color: #aeadad;
+}
+
+.formbtn:nth-child(2){
+    background-color: rgb(141, 255, 141);
+}
+
+.formbtn:nth-child(2):hover{
+    background-color: rgb(65, 241, 65); 
+}
