@@ -116,6 +116,7 @@ function removelist() {
     toggleRemoveButtons();
 }
 
+
 for(let i = 0; i < removebtn.length; i++) {
     removebtn[0].addEventListener('click', removelist);
     removebtn[1].addEventListener('click', function(a) {
