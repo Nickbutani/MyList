@@ -281,6 +281,11 @@ body{
     
 }
 
+.text-completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+
 .list-removebtn{
     display: flex;
     justify-content: flex-end;

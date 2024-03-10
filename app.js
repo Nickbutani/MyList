@@ -8,7 +8,7 @@ const formsection = document.getElementById('form-sec');
 const savebtn = document.querySelectorAll('.formbtn');
 const taskNameInput = document.querySelectorAll('.form-in input[type="text"]');
 const listSection = document.querySelector('.listsection-task');
-
+let listItems = document.querySelectorAll('.listsection-task li');
 
 for( let i = 0; i < taskli.length; i++){
     
@@ -119,10 +119,12 @@ function removelist() {
 for(let i = 0; i < removebtn.length; i++) {
     removebtn[0].addEventListener('click', removelist);
     removebtn[1].addEventListener('click', function(a) {
+    let checkboxes = document.querySelectorAll('.listsection-task input[type="checkbox"]');
+    let listItems = document.querySelectorAll('.listsection-task li');
         for(let i = 0; i < listItems.length; i++) {
             if(checkboxes[i].checked) {
-                listItems[i].style.textDecoration = 'line-through';
-                listItems[i].style.opacity = '0.4';
+                listItems[i].classList.add('text-completed');	
+                checkboxes[i].checked = false;
                 checkboxes[i].disabled = true;
             }
         }
