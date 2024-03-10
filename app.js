@@ -22,6 +22,7 @@ for( let i = 0; i < taskli.length; i++){
         newsection.innerHTML = '<h1>' + newh1 + '</h1>';
         listlinesec.style.display = 'flex'; 
         localStorage.setItem('todayContent', newh1);
+        e.preventDefault();
     })
 
 }
