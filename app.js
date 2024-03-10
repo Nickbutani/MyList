@@ -73,7 +73,11 @@ function saveToList() {
 }
 
 for(let i = 0; i < savebtn.length; i++) {
+    savebtn[0].addEventListener('click', function(){
+        formsection.style.display = 'none';
+    })
     savebtn[1].addEventListener('click', saveToList);
+
 }
 
 function removelist() {
