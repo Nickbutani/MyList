@@ -47,6 +47,19 @@ window.addEventListener('DOMContentLoaded', function() {
         toggleRemoveButtons();  
     }
 
+    let completedTasks = JSON.parse(localStorage.getItem("completedTasks"));
+
+    if (completedTasks !== null) {
+        let listItems = document.querySelectorAll('.listsection-task li');
+      
+        for(let i = 0; i < listItems.length; i++) {
+            if(completedTasks.includes(listItems[i].innerText)) {
+                listItems[i].classList.add('text-completed');
+                listItems[i].childNodes[0].disabled = true;
+                listItems[i].lastChild.setAttribute("class", "fa-regular fa-circle-check");
+            }
+        }
+    }
 });
 
 function toggleRemoveButtons() {
@@ -127,13 +140,26 @@ for(let i = 0; i < removebtn.length; i++) {
                 listItems[i].classList.add('text-completed');	
                 checkboxes[i].checked = false;
                 checkboxes[i].disabled = true;
+
+               
             }
         }
 
         let listicon = document.querySelectorAll('.listsection-task li i');
+       
+        
         for(let i = 0; i < listicon.length; i++){
+          
             listicon[i].setAttribute("class", "fa-regular fa-circle-check");
+        
         }
+        let completedTasks = [];
+        for(let i = 0; i < listItems.length; i++) {
+            if(listItems[i].classList.contains('text-completed')) {
+                completedTasks.push(listItems[i].innerText);
+            }
+        }
+        localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
     })
 }
 
